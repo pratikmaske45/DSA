@@ -36,6 +36,22 @@ class linkedlist:
             new_node.next =temp.next
             temp.next = new_node
 
+    def reverse(self): # Reversing a lnked list
+        curr= self.head
+        prev = None
+        while(curr):
+            next.node=curr.next
+            curr.next=prev
+            prev=curr
+            curr = next.node
+        self.head=prev
+    def print(self):
+        t1 =self.head
+        while(t1.next != None):
+            print(t1.data, end = " ")
+        
+        
+           
 
     def delete(self, value):
         temp =self.head
@@ -51,6 +67,7 @@ class linkedlist:
                 prev.next = temp.next
                 temp=None
 
+
                       
 
 
@@ -64,6 +81,8 @@ list.append(Node(40))
 list.print()    
 list.insert(Node(34), 3)
 list.delete(10)
+list.print()
+list.reverse()
 list.print()
      
 
