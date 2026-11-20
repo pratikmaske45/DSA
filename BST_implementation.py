@@ -35,6 +35,30 @@ class BST:
             self.inorder(rt.right)
     print("Inorder:")
 
+    def preorder(self,rt):
+        if rt is None:
+            return 
+        else:
+            print(rt.data, end = " ")
+            self.preorder(rt.left)
+            self.preorder(rt.right)
+    def postorder(self,rt):
+        if rt is None:
+            return 
+        else:
+            self.postorder(rt.left)
+            self.postorder(rt.right)
+            print(rt.data, end = " ")
+
+    def findminmax(self,rt):
+        temp = rt
+        while temp.left is not None:
+            temp=temp.left
+        print("minimum value in BST is:", temp.data)
+        temp = rt 
+        while temp.right is not None:
+            temp = temp.right
+        print("maximum value in BST is:", temp.data)
 b1=BST()
 b1.insert(Node(100))
 b1.insert(Node(10))
@@ -43,7 +67,12 @@ b1.insert(Node(0))
 b1.insert(Node(65))
 b1.insert(Node(300))
 b1.inorder(b1.root)
-                
+print("\npreorder:")
+b1.preorder(b1.root)
+print("\nPostorder:")
+b1.postorder(b1.root)
+print("\nMinimum and Maximum value in BST is:")
+b1.findminmax(b1.root)           
     
         
           
