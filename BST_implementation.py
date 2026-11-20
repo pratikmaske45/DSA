@@ -33,7 +33,7 @@ class BST:
             self.inorder(rt.left)
             print(rt.data, end = " ")
             self.inorder(rt.right)
-    print("Inorder:")
+    
 
     def preorder(self,rt):
         if rt is None:
@@ -66,6 +66,7 @@ b1.insert(Node(450))
 b1.insert(Node(0))
 b1.insert(Node(65))
 b1.insert(Node(300))
+print("\nInorder:")
 b1.inorder(b1.root)
 print("\npreorder:")
 b1.preorder(b1.root)
