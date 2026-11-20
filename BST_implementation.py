@@ -26,7 +26,24 @@ class BST:
                         return 
                     else:
                         temp = temp.right 
+    def inorder(self,rt):
+        if rt is None:
+            return 
+        else:
+            self.inorder(rt.left)
+            print(rt.data, end = " ")
+            self.inorder(rt.right)
+    print("Inorder:")
 
+b1=BST()
+b1.insert(Node(100))
+b1.insert(Node(10))
+b1.insert(Node(450))
+b1.insert(Node(0))
+b1.insert(Node(65))
+b1.insert(Node(300))
+b1.inorder(b1.root)
+                
     
         
           
